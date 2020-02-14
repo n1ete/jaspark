@@ -41,13 +41,13 @@
     - { role: pianobar, tags: ['pianobar'] }
     - { role: laptop, tags: ['laptop'] }
     - { role: thinkpad, tags: ['thinkpad'], when: "'ThinkPad' in ansible_product_version" }
-    - { role: macbook, tags: ['macbook'], when: "'MacBook' in ansible_product_name" }
+   # - { role: macbook, tags: ['macbook'], when: "'MacBook' in ansible_product_name" }
     - { role: screensaver, tags: ['screensaver'] }
     - { role: bitlbee, tags: ['bitlbee'] }
     - { role: weechat, tags: ['weechat'] }
     - { role: git-annex, tags: ['git-annex'], when: "gitannex is defined" }
     - { role: taskwarrior, tags: ['taskwarrior'] }
-    - { role: ledger, tags: ['ledger'] }
+   # - { role: ledger, tags: ['ledger'] }
     - { role: mail, tags: ['mail'] }
     - { role: cups, tags: ['cups'] }
     - { role: office, tags: ['office'] }
@@ -56,7 +56,7 @@
     - { role: dictd, tags: ['dictd'] }
     - { role: redshift, tags: ['redshift'] }
     - { role: rtorrent, tags: ['rtorrent'] }
-    - { role: virtualbox, tags: ['virtualbox'] }
+   # - { role: virtualbox, tags: ['virtualbox'] }
     - { role: hashicorp, tags: ['hashicorp'] }
     - { role: virtualenv, tags: ['virtualenv'] }
     - { role: backitup, tags: ['backitup'] }
@@ -82,7 +82,7 @@
     - { role: mirrorlist, tags: ['mirrorlist'], when: "mirrorlist is defined" }
     - { role: pkgfile, tags: ['pkgfile'], when: "pkgfile is defined" }
     - { role: units, tags: ['units'], when: "units is defined" }
-    - { role: logitech, tags: ['logitech'] }
+   # - { role: logitech, tags: ['logitech'] }
     - { role: pydev, tags: ['pydev'] }
     - { role: aria2, tags: ['aria2'] }
     - { role: signal, tags: ['signal'] }
