@@ -94,7 +94,8 @@ base_packages:
     - termdown
     - fzf
     - smartmontools
-
+    - joplin
+    
 filesystem_packages:
     - dosfstools
     - ntfs-3g
