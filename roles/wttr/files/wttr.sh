@@ -18,7 +18,7 @@ if [ "$columns" -lt 125 ]; then
 fi
 
 # If we fetched coordinates and are in the US, provide a URL to the detailed forecast.
-if [ "$country" == "United States" ] && [ -n "$lat" ] && [ -n "$lon" ]; then
+if [ "$country" == "Germany" ] && [ -n "$lat" ] && [ -n "$lon" ]; then
     details="https://forecast.weather.gov/MapClick.php?lat=$lat&lon=$lon&FcstType=graphical&menu=1"
 fi
 

@@ -26,10 +26,12 @@
     state: present
 
 - name: Install Metadata Anonymisation Toolkit
-  pacman:
+  aur:
     name: mat2
-    state: present
+    user: "{{ user.name }}"
+    skip_pgp: yes
   tags:
+    - aur
     - mat
 
 - name: Install youtube-dl
@@ -50,9 +52,4 @@
 - name: Install svgcleaner
   pacman:
     name: svgcleaner
-    state: present
-
-- name: Install flameshot
-  pacman:
-    name: flameshot
     state: present

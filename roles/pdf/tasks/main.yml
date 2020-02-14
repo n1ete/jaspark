@@ -71,6 +71,8 @@
   aur:
     name:
       - python-pdfminer.six
+      - python-pikepdf
+      - python-ruffus
       - ocrmypdf
     user: "{{ user.name }}"
   tags:
