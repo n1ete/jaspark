@@ -11,7 +11,7 @@ user:
 hostname: ostdev
 
 dotfiles:
-    url: https://github.com/n1ete/dotfiles.git
+    url: https://gitlab.com/n1ete/jadots.git
     destination: projects/dotfiles
     rcup_flags: -fx README.md
 
