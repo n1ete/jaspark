@@ -60,6 +60,10 @@ video_drivers:
     - libva-intel-driver
 
 base_packages:
+    - gcc
+    - autoconf
+    - pkgconf
+    - make
     - base-devel
     - man-db
     - man-pages

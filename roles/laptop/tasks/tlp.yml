@@ -31,8 +31,3 @@
   service: name=tlp.service enabled=yes
   tags:
     - tlp
-
-- name: Enable TLP sleep
-  service: name=tlp-sleep.service enabled=yes
-  tags:
-    - tlp

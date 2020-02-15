@@ -29,7 +29,7 @@
   aur:
     name: mat2
     user: "{{ user.name }}"
-    #skip_pgp: yes
+    skip_pgp: yes
   tags:
     - aur
     - mat
