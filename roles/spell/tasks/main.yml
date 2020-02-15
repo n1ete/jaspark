@@ -4,7 +4,7 @@
     name:
       - hunspell
       - hunspell-en_US
-      - hunspell-de_DE
+      - hunspell-de
     state: present
   tags:
     - hunspell
