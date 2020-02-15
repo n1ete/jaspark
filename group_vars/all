@@ -300,11 +300,11 @@ aur_fonts:
     - ttf-courier-prime
     - ttf-heuristica
     - ttf-merriweather
-    - ttf-merriweather-sans
+#    - ttf-merriweather-sans
     - ttf-oswald
     - ttf-quintessential
     - ttf-signika
-    - ttf-symbola
+#    - ttf-symbola
 
 syncthing:
     run_on: trusted
