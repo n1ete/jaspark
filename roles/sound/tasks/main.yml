@@ -24,4 +24,4 @@
     - aur
 
 - name: Push pamute
-  copy: src=pamute/pamute dest=/usr/local/bin/pamute mode=0755
+  copy: src=pamute dest=/usr/local/bin/pamute mode=0755

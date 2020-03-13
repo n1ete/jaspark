@@ -3,16 +3,31 @@
   pacman: name=acpi_call-dkms state=present
   tags:
     - battery
-
-- name: Install tpacpi-bat
-  pacman: name=tpacpi-bat state=present
+#
+#- name: Install tpacpi-bat
+#  pacman: name=tpacpi-bat state=present
+#  tags:
+#    - battery
+#
+#- name: Install fprintd
+#  aur: name=libfprint-git user=n1ete
+#  tags:
+#    - fingerprint
+#
+#- name: Install libfprint2
+#  aur: name=fprintd-libfprint2 user=n1ete
+#  tags:
+#    - fingerprint
+#
+- name: Install libfprint2
+  aur:
+    name:
+    - pam_wrapper  
+    - libfprint-git
+    - fprintd-libfprint2
+    user: "{{ user.name }}"
   tags:
-    - battery
-
-- name: Install fprintd
-  pacman: name=fprintd state=present
-  tags:
-    - fingerprint
+   - fingerprint
 
 - name: Push sudo authentication file
   template: src=pam.d/sudo.j2 dest=/etc/pam.d/sudo
@@ -24,7 +39,7 @@
   tags:
     - fingerprint
 
-- name: Push trackpoint udev rules
-  copy: src=10-trackpoint.rules dest=/etc/udev/rules.d/10-trackpoint.rules
-  tags:
-    - trackpoint
+      #- name: Push trackpoint udev rules
+      #  copy: src=10-trackpoint.rules dest=/etc/udev/rules.d/10-trackpoint.rules
+      #  tags:
+      #    - trackpoint

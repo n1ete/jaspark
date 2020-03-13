@@ -8,11 +8,11 @@ user:
         dir: log
         rotate: 8
 
-hostname: ostdev
+hostname: ostgut
 
 dotfiles:
     url: https://gitlab.com/n1ete/jadots.git
-    destination: projects/dotfiles
+    destination: projects/jadots
     rcup_flags: -fx README.md
 
 aur:
@@ -27,7 +27,7 @@ aur:
 
 ssh:
     port: 22
-    user_key: /root/id_rsa
+    user_key: /home/n1ete/.ssh/id_rsa
     enable_sshd: False
 
 gnupg:
@@ -48,11 +48,11 @@ network:
     conn_check:
         interval: 0
     trusted_uuid:
-        - dfd2e0fc-4148-491a-93e3-03d7aced49eb
-        - 782e89ce-3268-362e-9e7d-74b063a41009
-        - 2d5a51fe-52ea-420d-985f-13602045b131
-        - b5346448-3ab6-4ed3-9334-0181c35df1e5
-        - 37b2e14b-c188-3566-afe5-054abf61ed3c
+        - 0e7986a2-e8ea-412d-a344-0f8b31edfaaf
+        - 2a2d4ccf-cae4-42d0-9d4b-35ed5b5e98cc
+        - 151eff1f-0ad5-49c9-8e92-8f1ce492c9f9
+        - 4791c549-de2a-38f2-a549-32c05bf9bba5
+
 editors:
     - emacs
 
@@ -99,6 +99,8 @@ base_packages:
     - fzf
     - smartmontools
     - joplin
+    - keepassxc
+    - ncdu
     
 filesystem_packages:
     - dosfstools
@@ -135,7 +137,7 @@ bitlbee:
 bootloader: grub
 
 postgresql:
-    enable: True
+    enable: False
     root: /home/postgres
 
 fingerprint: True
@@ -250,7 +252,7 @@ gdm:
         tap_to_click: True
     accessibility_menu: True
 
-#desktop_environment: i3
+desktop_environment: i3
 gnome:
     night_light:
         enabled: True
@@ -286,6 +288,7 @@ gnome:
         extensions_support: True
 
 base_fonts:
+    - adobe-source-code-pro-fonts
     - cantarell-fonts
     - gsfonts
     - noto-fonts
@@ -295,20 +298,24 @@ base_fonts:
     - ttf-carlito
     - ttf-dejavu
     - ttf-droid
+    - ttf-fira-mono
+    - ttf-ibm-plex
     - ttf-inconsolata
     - ttf-liberation
     - ttf-opensans
     - ttf-ubuntu-font-family
 
 aur_fonts:
+    - ttf-bitstream-charter
+    - ttf-cooper-hewitt
     - ttf-courier-prime
-#    - ttf-heuristica
-#    - ttf-merriweather
-#    - ttf-merriweather-sans
-#    - ttf-oswald
-#    - ttf-quintessential
-#    - ttf-signika
-#    - ttf-symbola
+    - ttf-heuristica
+    - ttf-merriweather
+    - ttf-merriweather-sans
+    - ttf-oswald
+    - ttf-quintessential
+    - ttf-signika
+#   - ttf-symbola
 
 syncthing:
     run_on: trusted
@@ -326,8 +333,10 @@ pkgfile:
 hardened:
     enable_namespaces: true
 
-kernel_parameters: "quiet consoleblank=60 i915.enable_psr=2 i915.modeset=1 i915.fastboot=1 i915.enable_guc=3 i915.enable_fbc=1 net.ifnames=0 spectre_v2=off nowatchdog nopti modprobe.blacklist=nouveau acpi_osi=! "acpi_osi=Windows 2015" acpi=force acpi_enforce_resources=lax drm.vblankoffdelay=1 acpi_backlight=native"
+kernel_parameters: 'consoleblank=60  modprobe.blacklist=nouveau loglevel=3 nvidia-drm.modeset=1 i915.enable_psr=1 i915.enable_guc=2 i915.enable_fbc=1 i915.fastboot=1 net.ifnames=0'
 
+
+#i915.enable_psr=2 i915.enable_guc=2 i915.enable_fbc=1 net.ifnames=0
 #BOOT_IMAGE=/vmlinuz-linux-zen root=/dev/mapper/archlinux rw rootflags=subvol=root \
 #cryptdevice=/dev/nvme0n1p4:archlinux:allow-discards rd.luks.options=discards rw \
 #acpi_osi=! "acpi_osi=Windows 2015" acpi=force acpi_enforce_resources=lax drm.vblankoffdelay=1 acpi_backlight=native \

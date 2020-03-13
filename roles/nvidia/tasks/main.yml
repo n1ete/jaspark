@@ -1,0 +1,18 @@
+---
+- name: Install nvidia packages
+  pacman: 
+    name:
+      - nvidia-dkms
+      - nvidia-utils
+      - nvidia-setting
+      - nvidia-prime 
+  state: present
+
+- name: adding modules to mkinitcpio
+
+- name: copy nvidia pacman hook file
+  file: src=nvidia.hook
+        dest=/etc/pacman.d/hooks/nvidia.hook
+  state: present
+
+- name: set nvidia-drm.modeset=1 to kernel options

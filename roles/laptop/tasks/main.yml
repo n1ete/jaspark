@@ -1,10 +1,10 @@
 ---
 - include: tlp.yml
 
-- name: Copy touchpad configuration file
-  copy: src=30-touchpad.conf dest=/etc/X11/xorg.conf.d/30-touchpad.conf
-  tags:
-    - libinput
+  #- name: Copy touchpad configuration file
+  #  copy: src=30-touchpad.conf dest=/etc/X11/xorg.conf.d/30-touchpad.conf
+  #  tags:
+  #    - libinput
 
 - name: Copy logind configuration file
   copy: src=logind.conf dest=/etc/systemd/logind.conf
@@ -47,9 +47,9 @@
   tags:
     - aur
 
-- name: Install battop
-  aur:
-    name: battop
-    user: "{{ user.name }}"
-  tags:
-    - aur
+#- name: Install battop
+#  aur:
+#    name: battop
+#    user: "{{ user.name }}"
+#  tags:
+#    - aur

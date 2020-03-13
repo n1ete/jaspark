@@ -11,7 +11,7 @@
     - tlp
 
 - name: Copy TLP configuration file
-  copy: src=tlp.conf dest=/etc/default/tlp
+  copy: src=tlp.conf dest=/etc/tlp.conf
   notify:
     - restart tlp
   tags:
