@@ -333,7 +333,7 @@ pkgfile:
 hardened:
     enable_namespaces: true
 
-kernel_parameters: 'consoleblank=60  modprobe.blacklist=nouveau loglevel=3 nvidia-drm.modeset=1 i915.enable_psr=1 i915.enable_guc=2 i915.enable_fbc=1 i915.fastboot=1 net.ifnames=0'
+kernel_parameters: 'consoleblank=60 apparmor=1 security=apparmor modprobe.blacklist=nouveau loglevel=3 nvidia-drm.modeset=1 i915.enable_psr=1 i915.enable_guc=2 i915.enable_fbc=1 i915.fastboot=1 net.ifnames=0'
 
 
 #i915.enable_psr=2 i915.enable_guc=2 i915.enable_fbc=1 net.ifnames=0
