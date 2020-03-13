@@ -48,13 +48,14 @@ network:
     conn_check:
         interval: 0
     trusted_uuid:
+        - 4728ce5a-0c17-4ddb-a0cd-7ea414bec47c
         - 0e7986a2-e8ea-412d-a344-0f8b31edfaaf
         - 2a2d4ccf-cae4-42d0-9d4b-35ed5b5e98cc
         - 151eff1f-0ad5-49c9-8e92-8f1ce492c9f9
         - 4791c549-de2a-38f2-a549-32c05bf9bba5
 
 editors:
-    - emacs
+    - vim
 
 video_drivers:
     - libva-intel-driver
