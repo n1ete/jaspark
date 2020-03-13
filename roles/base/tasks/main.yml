@@ -9,6 +9,14 @@
   hostname: name={{ hostname }}
   when: hostname is defined
 
+- name: blacklist pc-speaker
+  shell: echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+  args:
+    executable: /bin/bash
+
+- name: copy mkinitcpio thinkpad config
+  copy: src=mkinitcpio dest=/etc/mkinitcpio.conf
+
 - name: Set kernel parameters
   lineinfile: "dest=/etc/default/grub
               regexp=^GRUB_CMDLINE_LINUX_DEFAULT
