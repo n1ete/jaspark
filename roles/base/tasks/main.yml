@@ -13,6 +13,7 @@
   shell: echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
   args:
     executable: /bin/bash
+#  create: true
 
 - name: copy mkinitcpio thinkpad config
   copy: src=mkinitcpio dest=/etc/mkinitcpio.conf

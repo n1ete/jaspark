@@ -8,6 +8,13 @@
       - i3status
     state: present
 
+- name: install i3blocks modules
+  git: 
+   repo: git@github.com:vivien/i3blocks-contrib.git
+   dest: ~/.config/i3blocks/blocks/
+   clone: yes
+   update: yes
+
 - name: Install py3status
   pacman: name=py3status state=present
 
