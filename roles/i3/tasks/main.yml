@@ -9,11 +9,9 @@
     state: present
 
 - name: install i3blocks modules
-  git: 
-   repo: git@github.com:vivien/i3blocks-contrib.git
-   dest: ~/.config/i3blocks/blocks/
-   clone: yes
-   update: yes
+  git: repo=https://github.com/vivien/i3blocks-contrib.git dest=~/.config/i3blocks/blocks/ accept_hostkey=yes update=no
+  become: yes
+  become_user: "{{ user.name }}"
 
 - name: Install py3status
   pacman: name=py3status state=present
