@@ -334,7 +334,7 @@ pkgfile:
 hardened:
     enable_namespaces: true
 
-kernel_parameters: 'consoleblank=60 apparmor=1 security=apparmor modprobe.blacklist=nouveau loglevel=3 nvidia-drm.modeset=1 i915.enable_psr=1 i915.enable_guc=2 i915.enable_fbc=1 i915.fastboot=1 net.ifnames=0'
+kernel_parameters: 'loglevel=3 spectre_v2=off net.ifnames=0 consoleblank=60 apparmor=1 security=apparmor modprobe.blacklist=nouveau nvidia-drm.modeset=1 thinkfan_acpi.fan_control=1 i915.enable_psr=2 i915.enable_guc=2 i915.disable_power_well=0 i915.enable_fbc=1 i915.fastboot=1 i915.enable_dpcd_backlight=1'
 
 
 #i915.enable_psr=2 i915.enable_guc=2 i915.enable_fbc=1 net.ifnames=0

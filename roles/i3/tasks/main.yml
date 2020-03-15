@@ -5,7 +5,7 @@
       - i3-gaps
       - i3blocks
       - i3lock
-      - i3status
+      #- i3status
     state: present
 
 - name: install i3blocks modules
