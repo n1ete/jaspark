@@ -4,7 +4,7 @@
     name:
       - cty
       - flxmlrpc
-      - fldigi
+      #- fldigi
       - flrig
     user: "{{ user.name }}"
   tags:
