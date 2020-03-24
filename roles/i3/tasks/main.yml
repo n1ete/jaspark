@@ -8,6 +8,14 @@
       #- i3status
     state: present
 
+- name: install betterlockscreen
+  aur: 
+    name:
+     - betterlockscreen
+  user: "{{ user.name }}"
+  tags:
+    - aur
+
 - name: install i3blocks modules
   git: repo=https://github.com/vivien/i3blocks-contrib.git dest=~/.config/i3blocks/blocks/ accept_hostkey=yes update=no
   become: yes
