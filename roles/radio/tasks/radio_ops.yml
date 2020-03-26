@@ -4,13 +4,13 @@
     name:
       - cty
       - flxmlrpc
-      #- fldigi
+      - fldigi
       - flrig
     user: "{{ user.name }}"
   tags:
     - aur
 
-- name: Install wsjtx
-  aur: name=wsjtx user={{ user.name }}
-  tags:
-    - aur
+#- name: Install wsjtx #failes to build, patch needed
+#  aur: name=wsjtx user={{ user.name }}
+#  tags:
+#    - aur

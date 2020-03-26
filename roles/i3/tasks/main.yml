@@ -9,10 +9,7 @@
     state: present
 
 - name: install betterlockscreen
-  aur: 
-    name:
-     - betterlockscreen
-  user: "{{ user.name }}"
+  aur: name=betterlockscreen user={{ user.name }}
   tags:
     - aur
 
